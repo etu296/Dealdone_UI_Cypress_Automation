@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import {VisitUI, login} from "../e2e/dealdone UI/helper";
+
+Cypress.Commands.add("VisitUI",() => {
+  VisitUI();
+});
+Cypress.Commands.add("login",(email,password) => {
+    login(email,password);
+  });
